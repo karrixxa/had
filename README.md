@@ -1,10 +1,31 @@
-# Houston TrainFo Crossing Data Pipeline
+# Houston Fire Department Rail Crossing Project
 
-This repository downloads TrainFo crossing event data, preserves the raw source files, and produces reproducible merged outputs for all catalog crossings and the eight-street analysis subset.
+This project combines TrainFo data collection with exploratory analysis of rail crossing blockages relevant to the Houston Fire Department.
+
+## Start here
+
+- [Consolidated EDA findings](reports/eda/README.md), or open [the browser report](reports/eda/report.html) locally.
+- [Review of the two contributed analyses](docs/EDA_REVIEW.md): shared code, methodological corrections, and limitations.
+- [Run the current EDA](analysis/README.md): reproducible analysis, definitions, and outputs.
+- [Original contributions](archive/README.md): preserved Peikun and extended EDA work.
+
+Run the full offline EDA against the existing local coordinate-enriched exports:
+
+```sh
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m analysis.run_eda
+.venv/bin/python -m unittest discover -s tests
+```
+
+The default local inputs are `data/processed/mergedtrain_with_coords8.csv` and `data/processed/mergedtrainfo_with_coords_ALL.csv`. They are excluded from Git. After a fresh pipeline export, pass its dated filenames with `--input` and `--full-input`. Hashes of the analyzed snapshot are recorded in `reports/eda/manifest.json`.
 
 ## Project layout
 
 ```text
+analysis/                 Current EDA code and method definitions
+reports/eda/              Consolidated report, figures, tables, input manifest
+docs/                     Contribution review and original report draft
+archive/contributions/    Original hfd_eda and HFD_EDA_Peikun packages
 config/
   eight_streets.json       FRA IDs for the focused eight-street subset
 initial_report/
@@ -19,6 +40,8 @@ download_trainfo.py        Command-line refresh entry point
 prepare_initial_report.py  Data-quality audit and report artifact generation
 crossings.xlsx             Catalog of crossing names and TrainFo URLs
 ```
+
+The existing root Python files remain command-line entry points for the data pipeline and earlier maps/reports, preserving their paths for the scheduled refresh and existing commands. `initial_report/` is the earlier data-audit package, and `visualizations/` holds earlier map outputs. Current EDA results have one home under `reports/eda/`.
 
 Raw downloads and generated datasets are intentionally excluded from Git. They can be recreated locally by following the workflow below.
 

@@ -1,0 +1,38 @@
+{
+  "inputs": [
+    {
+      "path": "data/processed/mergedtrain_with_coords8.csv",
+      "sha256": "a5f042397f23ef0217dc35ba565be84ee6ff64acf65f337db563393549ead7b2"
+    },
+    {
+      "path": "data/processed/mergedtrainfo_with_coords_ALL.csv",
+      "sha256": "a09d8aff9f006d3ebd3f05fd8bcf71fdf2dd045412b661c82b23e4ded9056ea5"
+    }
+  ],
+  "python": "3.9.6",
+  "pandas": "2.3.3",
+  "numpy": "2.0.2",
+  "matplotlib": "3.9.4",
+  "raw_rows": 153141,
+  "clean_rows": 153004,
+  "union_episodes": 150162,
+  "full_rows": 285263,
+  "full_fra_ids": 67,
+  "duplicate_feed_groups": [
+    [
+      "176296N",
+      "758750G"
+    ],
+    [
+      "288051H",
+      "755355M"
+    ]
+  ],
+  "focused_matches_full": true,
+  "all_eight_eligible_days": 166.38888888888889,
+  "timezone": "unverified America/Chicago wall clock, naive",
+  "primary_merge_gap_min": 0,
+  "silence_threshold_h": 24,
+  "bootstrap_seed": 20260925,
+  "no_fault_day_exclusion": true
+}

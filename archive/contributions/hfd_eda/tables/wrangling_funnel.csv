@@ -1,0 +1,11 @@
+Step,Count
+Raw rows in the eight-crossing export,153141
+After removing exact duplicate rows,153022
+Durations below zero set to zero,18
+Blockage episodes after joining records <= 2 min apart,131799
+Episodes on flagged sensor-fault days (excluded),1351
+Episodes kept for analysis,130448
+Sensor-outage intervals (> 24 h with no record),128
+Minute-level grid: crossings x minutes,"8 x 2,124,000"
+Crossing-minutes with the sensor reporting,"13,892,538"
+  ...of which blocked,"1,510,412"

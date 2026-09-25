@@ -1,0 +1,511 @@
+<!doctype html><html lang='en'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>HFD crossing EDA</title><style>body{font:16px/1.6 system-ui;color:#243447;max-width:1200px;margin:40px auto;padding:0 24px}h1,h2{color:#173b60}img{width:100%;height:auto}table{border-collapse:collapse;font-size:13px;width:100%}th,td{padding:8px;text-align:right;border-bottom:1px solid #ddd}th:first-child,td:first-child{text-align:left}.table{overflow:auto}section{margin:42px 0}p{max-width:1000px}</style>
+<h1>HFD crossing EDA</h1><p>Consolidated analysis of the local September 20, 2026 export.</p>
+<section><h2>What the extended analysis shows</h2><p>The focused export contains 153,141 rows. Removing invalid/nonpositive durations and duplicate event keys leaves 153,004 records, representing 150,162 disjoint blockage episodes after overlap union. Commerce Street has the largest recorded blocked-time share under the 24-hour silence scenario (14.64%). At Hirsch Road, episodes longer than 30 minutes account for 71.6% of blocked time. Bridging gaps up to two minutes adds 251.2 hours of originally clear time across the eight crossings.</p>
+</section>
+<section><h2>Crossing burden and long tails</h2><p>The denominator is each crossing&#x27;s first valid start through last valid end, minus entire silent gaps longer than 24 hours. This is an assumed eligible window, not verified uptime. Long durations are retained and should be investigated with the provider. Unioning overlaps avoids counting the same blocked minute twice. No short clear gaps are filled in the primary analysis.</p>
+<img src='figures/01_burden_and_tails.png' alt='Crossing burden and long tails'>
+<div class='table'><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Name</th>
+      <th>Union episodes</th>
+      <th>Median min</th>
+      <th>P90 min</th>
+      <th>Blocked pct span</th>
+      <th>Blocked pct eligible</th>
+      <th>Over 30 time share pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Commerce Street</td>
+      <td>35522</td>
+      <td>6.88</td>
+      <td>14.50</td>
+      <td>14.60</td>
+      <td>14.64</td>
+      <td>14.08</td>
+    </tr>
+    <tr>
+      <td>Hirsch Road</td>
+      <td>11240</td>
+      <td>7.75</td>
+      <td>55.48</td>
+      <td>12.26</td>
+      <td>14.09</td>
+      <td>71.63</td>
+    </tr>
+    <tr>
+      <td>Leeland Street</td>
+      <td>31067</td>
+      <td>5.18</td>
+      <td>11.94</td>
+      <td>12.46</td>
+      <td>13.54</td>
+      <td>32.51</td>
+    </tr>
+    <tr>
+      <td>Lockwood Street</td>
+      <td>11508</td>
+      <td>7.90</td>
+      <td>21.20</td>
+      <td>7.08</td>
+      <td>7.15</td>
+      <td>40.96</td>
+    </tr>
+    <tr>
+      <td>Market Street</td>
+      <td>23775</td>
+      <td>4.52</td>
+      <td>18.69</td>
+      <td>12.67</td>
+      <td>12.73</td>
+      <td>41.14</td>
+    </tr>
+    <tr>
+      <td>Polk Street</td>
+      <td>16213</td>
+      <td>3.80</td>
+      <td>12.77</td>
+      <td>6.69</td>
+      <td>6.89</td>
+      <td>46.57</td>
+    </tr>
+    <tr>
+      <td>Telephone Road</td>
+      <td>2094</td>
+      <td>3.28</td>
+      <td>15.24</td>
+      <td>2.76</td>
+      <td>4.49</td>
+      <td>52.56</td>
+    </tr>
+    <tr>
+      <td>York Street</td>
+      <td>18743</td>
+      <td>1.63</td>
+      <td>13.13</td>
+      <td>5.55</td>
+      <td>5.70</td>
+      <td>30.46</td>
+    </tr>
+  </tbody>
+</table></div>
+</section>
+<section><h2>Time trends and comparable seasons</h2><p>Monthly lines omit months with fewer than 15 eligible days. Missing lines do not mean zero blockages. The table compares July–August 2025 with the same months of 2026 to reduce seasonal and partial-month confounding. Market has no July–August 2026 records, so that comparison is unavailable. Differences still mix train activity, duration quality, and sensor availability. Bootstrap intervals in the supporting table resample whole days with at least 12 eligible hours, use 1,000 draws, and do not account for dependence across days or systematic coverage errors.</p>
+<img src='figures/02_monthly_patterns.png' alt='Time trends and comparable seasons'>
+<div class='table'><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Name</th>
+      <th>Year</th>
+      <th>Eligible days</th>
+      <th>Blocked pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Commerce Street</td>
+      <td>2025</td>
+      <td>62.00</td>
+      <td>15.70</td>
+    </tr>
+    <tr>
+      <td>Commerce Street</td>
+      <td>2026</td>
+      <td>62.00</td>
+      <td>11.31</td>
+    </tr>
+    <tr>
+      <td>Hirsch Road</td>
+      <td>2025</td>
+      <td>62.00</td>
+      <td>13.19</td>
+    </tr>
+    <tr>
+      <td>Hirsch Road</td>
+      <td>2026</td>
+      <td>59.42</td>
+      <td>10.51</td>
+    </tr>
+    <tr>
+      <td>Leeland Street</td>
+      <td>2025</td>
+      <td>62.00</td>
+      <td>12.79</td>
+    </tr>
+    <tr>
+      <td>Leeland Street</td>
+      <td>2026</td>
+      <td>62.00</td>
+      <td>10.59</td>
+    </tr>
+    <tr>
+      <td>Lockwood Street</td>
+      <td>2025</td>
+      <td>62.00</td>
+      <td>6.27</td>
+    </tr>
+    <tr>
+      <td>Lockwood Street</td>
+      <td>2026</td>
+      <td>62.00</td>
+      <td>4.97</td>
+    </tr>
+    <tr>
+      <td>Market Street</td>
+      <td>2025</td>
+      <td>62.00</td>
+      <td>13.57</td>
+    </tr>
+    <tr>
+      <td>Market Street</td>
+      <td>2026</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>Polk Street</td>
+      <td>2025</td>
+      <td>62.00</td>
+      <td>5.22</td>
+    </tr>
+    <tr>
+      <td>Polk Street</td>
+      <td>2026</td>
+      <td>62.00</td>
+      <td>2.73</td>
+    </tr>
+    <tr>
+      <td>Telephone Road</td>
+      <td>2025</td>
+      <td>33.78</td>
+      <td>1.79</td>
+    </tr>
+    <tr>
+      <td>Telephone Road</td>
+      <td>2026</td>
+      <td>31.30</td>
+      <td>7.45</td>
+    </tr>
+    <tr>
+      <td>York Street</td>
+      <td>2025</td>
+      <td>54.94</td>
+      <td>5.48</td>
+    </tr>
+    <tr>
+      <td>York Street</td>
+      <td>2026</td>
+      <td>58.78</td>
+      <td>4.88</td>
+    </tr>
+  </tbody>
+</table></div>
+</section>
+<section><h2>Sensitivity to preparation choices</h2><p>The primary analysis retains suspect burst days rather than treating an unverified flag as proof of a fault. The archive&#x27;s centered 29-active-day rolling rule is retrospective and must not be used as an online feature. Silence thresholds of 6, 12, 24, 48 hours and no silence exclusion are reported separately. Merge thresholds of 0, 1, 2 and 5 minutes use the same zero-gap exposure denominator so the additional blocked time is explicit. The table also quantifies exclusion of suspect days identified by the contributed centered burst heuristic, rebuilt from valid two-minute-merged episodes. It subtracts those days from both continuous blocked time and eligible exposure, without labeling the flags as confirmed faults.</p>
+<img src='figures/03_assumption_sensitivity.png' alt='Sensitivity to preparation choices'>
+<div class='table'><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Name</th>
+      <th>Suspect days</th>
+      <th>Retained blocked pct</th>
+      <th>Excluded blocked pct</th>
+      <th>Excluded eligible days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Commerce Street</td>
+      <td>0</td>
+      <td>14.64</td>
+      <td>14.64</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Hirsch Road</td>
+      <td>4</td>
+      <td>14.09</td>
+      <td>14.02</td>
+      <td>3.92</td>
+    </tr>
+    <tr>
+      <td>Leeland Street</td>
+      <td>0</td>
+      <td>13.54</td>
+      <td>13.54</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Lockwood Street</td>
+      <td>0</td>
+      <td>7.15</td>
+      <td>7.15</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Market Street</td>
+      <td>0</td>
+      <td>12.73</td>
+      <td>12.73</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Polk Street</td>
+      <td>0</td>
+      <td>6.89</td>
+      <td>6.89</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>Telephone Road</td>
+      <td>0</td>
+      <td>4.49</td>
+      <td>4.49</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <td>York Street</td>
+      <td>3</td>
+      <td>5.70</td>
+      <td>5.70</td>
+      <td>3.00</td>
+    </tr>
+  </tbody>
+</table></div>
+</section>
+<section><h2>Simultaneous blockage and daily timing</h2><p>All eight crossings share 166.4 eligible days under the silence assumption. The strongest pairwise simultaneous-blockage lift is Lockwood Street / York Street (5.68 times the product of their marginal rates on jointly eligible minutes). Pairwise windows differ. Association does not establish a shared train, travel direction, or a route obstruction. Hourly estimates use exact minute ticks and can differ slightly from continuous-time burden. Concurrency includes every possible count from zero through eight.</p>
+<img src='figures/04_concurrency_and_hour.png' alt='Simultaneous blockage and daily timing'>
+<div class='table'><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>A</th>
+      <th>B</th>
+      <th>Joint eligible days</th>
+      <th>A blocked pct</th>
+      <th>B blocked pct</th>
+      <th>Both blocked pct</th>
+      <th>P b given a pct</th>
+      <th>Lift</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lockwood Street</td>
+      <td>York Street</td>
+      <td>1419.65</td>
+      <td>7.50</td>
+      <td>6.19</td>
+      <td>2.64</td>
+      <td>35.20</td>
+      <td>5.68</td>
+    </tr>
+    <tr>
+      <td>Polk Street</td>
+      <td>Telephone Road</td>
+      <td>304.76</td>
+      <td>4.77</td>
+      <td>4.49</td>
+      <td>0.81</td>
+      <td>16.90</td>
+      <td>3.77</td>
+    </tr>
+    <tr>
+      <td>Commerce Street</td>
+      <td>York Street</td>
+      <td>1428.47</td>
+      <td>15.51</td>
+      <td>6.19</td>
+      <td>2.06</td>
+      <td>13.27</td>
+      <td>2.14</td>
+    </tr>
+    <tr>
+      <td>Telephone Road</td>
+      <td>York Street</td>
+      <td>286.90</td>
+      <td>4.53</td>
+      <td>4.59</td>
+      <td>0.27</td>
+      <td>5.86</td>
+      <td>1.28</td>
+    </tr>
+    <tr>
+      <td>Hirsch Road</td>
+      <td>Polk Street</td>
+      <td>1095.00</td>
+      <td>14.47</td>
+      <td>7.13</td>
+      <td>1.28</td>
+      <td>8.85</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <td>Commerce Street</td>
+      <td>Leeland Street</td>
+      <td>1204.50</td>
+      <td>15.69</td>
+      <td>14.38</td>
+      <td>2.69</td>
+      <td>17.15</td>
+      <td>1.19</td>
+    </tr>
+    <tr>
+      <td>Hirsch Road</td>
+      <td>Telephone Road</td>
+      <td>302.78</td>
+      <td>12.94</td>
+      <td>4.50</td>
+      <td>0.63</td>
+      <td>4.87</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <td>Leeland Street</td>
+      <td>Telephone Road</td>
+      <td>305.26</td>
+      <td>14.03</td>
+      <td>4.49</td>
+      <td>0.67</td>
+      <td>4.78</td>
+      <td>1.07</td>
+    </tr>
+  </tbody>
+</table></div>
+</section>
+<section><h2>Duration tails and remaining waits</h2><p>Survival curves and remaining-duration tables describe completed, recorded union episodes. The remaining wait is conditional on an episode exceeding the stated elapsed time, with the number at risk reported. Boundary censoring and source truncation are unknown. These estimates describe recorded blockages and are not estimates of fire-engine response delay.</p>
+<img src='figures/05_duration_survival.png' alt='Duration tails and remaining waits'>
+</section>
+<section><h2>Forecast readiness</h2><p>A lightweight baseline check predicts blocked state at 5, 10, 15, 30 and 60 minutes. Models use training targets before January 2025, validation from January–June 2025, and test from July 2025 onward. Every tick between issue and target must be eligible, and issue/target timestamps must stay within the evaluation split. Baselines are hour-of-week frequency, persistence, and an empirical probability conditional on the current state, with 20 training observations of shrinkage. Telephone has no pre-2025 training history and is omitted from these fitted baselines. Brier scores and counts are supplied per crossing, horizon, model and split. These are retrospective diagnostics: silence masks use future information and sensor uptime must be available independently for an operational evaluation. Earlier archived model scores require correction before reuse. The table shows 10-minute test skill by crossing; positive values improve on the hour-of-week baseline, and negative values are worse.</p>
+<img src='figures/06_forecast_baselines.png' alt='Forecast readiness'>
+<div class='table'><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>Name</th>
+      <th>Current state probability</th>
+      <th>Persistence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th></th>
+      <td>Commerce Street</td>
+      <td>0.01</td>
+      <td>-0.79</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Hirsch Road</td>
+      <td>0.38</td>
+      <td>0.26</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Leeland Street</td>
+      <td>0.07</td>
+      <td>-0.44</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Lockwood Street</td>
+      <td>-0.02</td>
+      <td>-0.55</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Market Street</td>
+      <td>0.08</td>
+      <td>-0.35</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Polk Street</td>
+      <td>0.07</td>
+      <td>-0.36</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>York Street</td>
+      <td>0.14</td>
+      <td>-0.27</td>
+    </tr>
+  </tbody>
+</table></div>
+</section>
+<section><h2>Source audit and reproducibility</h2><p>The full source has 285,263 rows and 67 FRA identifiers. Identical complete timestamp/duration multisets occur in these identifier groups: [[&#x27;176296N&#x27;, &#x27;758750G&#x27;], [&#x27;288051H&#x27;, &#x27;755355M&#x27;]]. Focused/full-source multiset match: True. Do not count identical feeds as independent evidence. Input SHA-256 hashes and package versions are stored in manifest.json. Timestamps remain naive local-clock values because the source does not supply offsets. DST ambiguity remains unresolved; absence of events in a clock hour does not prove a timezone. Run `.venv/bin/python -m analysis.run_eda` from the repository root.</p>
+<div class='table'><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Fra</th>
+      <th>Name</th>
+      <th>Raw rows</th>
+      <th>Invalid rows</th>
+      <th>Duplicate keys</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>288039B</td>
+      <td>Polk Street</td>
+      <td>16594</td>
+      <td>3</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>288051H</td>
+      <td>Telephone Road</td>
+      <td>2113</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>288129A</td>
+      <td>Commerce Street</td>
+      <td>35603</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>288224V</td>
+      <td>Leeland Street</td>
+      <td>31797</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>755640L</td>
+      <td>Hirsch Road</td>
+      <td>12035</td>
+      <td>1</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td>755709E</td>
+      <td>Market Street</td>
+      <td>24504</td>
+      <td>3</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>859517C</td>
+      <td>York Street</td>
+      <td>18960</td>
+      <td>0</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>859523F</td>
+      <td>Lockwood Street</td>
+      <td>11535</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div>
+</section>
+<section><h2>Next research priorities</h2><p>Obtain sensor heartbeat/uptime and timezone documentation; adjudicate long records and suspect burst days; validate actual rail connectivity before interpreting lead–lag results; add dispatch timestamps and routes before translating crossing burden into HFD response impact. A subsequent model evaluation should use causal missingness handling, a frozen validation design, calibration, and held-out crossing/time tests.</p>
+</section>
+</html>

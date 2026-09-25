@@ -36,3 +36,10 @@ trainfo_merged*.xlsx
 # OS/editor files
 .DS_Store
 .vscode/settings.json
+
+# Imported contribution datasets remain local; preserve original analysis artifacts.
+archive/contributions/**/data/processed/
+archive/contributions/**/data/external/
+
+# Large reproducible daily table; aggregate EDA tables and figures are versioned.
+reports/eda/tables/daily_exposure.csv

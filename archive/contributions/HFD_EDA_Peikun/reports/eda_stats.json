@@ -1,0 +1,830 @@
+{
+ "n_raw_events": 153022,
+ "n_episodes": 131799,
+ "observed_days": {
+  "Market": 1302.7,
+  "Hirsch": 1100.2,
+  "Commerce": 1469.8,
+  "York": 1429.7,
+  "Lockwood": 1459.6,
+  "Leeland": 1208.7,
+  "Polk": 1371.1,
+  "Telephone": 305.7
+ },
+ "span": [
+  "2022-09-07 17:57:00",
+  "2026-09-20 18:51:06"
+ ],
+ "leadlag": [
+  {
+   "a": "York",
+   "b": "Lockwood",
+   "same_line": true,
+   "peak_ratio": 36.23,
+   "peak_lag_min": 5,
+   "reverse_peak_ratio": 7.69,
+   "n_a": 12331
+  },
+  {
+   "a": "Commerce",
+   "b": "York",
+   "same_line": false,
+   "peak_ratio": 10.44,
+   "peak_lag_min": 6,
+   "reverse_peak_ratio": 2.09,
+   "n_a": 33811
+  },
+  {
+   "a": "Telephone",
+   "b": "Polk",
+   "same_line": true,
+   "peak_ratio": 10.1,
+   "peak_lag_min": 2,
+   "reverse_peak_ratio": 8.12,
+   "n_a": 2725
+  },
+  {
+   "a": "Commerce",
+   "b": "Lockwood",
+   "same_line": false,
+   "peak_ratio": 8.68,
+   "peak_lag_min": 10,
+   "reverse_peak_ratio": 2.71,
+   "n_a": 34430
+  },
+  {
+   "a": "Commerce",
+   "b": "Leeland",
+   "same_line": true,
+   "peak_ratio": 6.93,
+   "peak_lag_min": 6,
+   "reverse_peak_ratio": 3.64,
+   "n_a": 29023
+  },
+  {
+   "a": "Hirsch",
+   "b": "Market",
+   "same_line": false,
+   "peak_ratio": 5.67,
+   "peak_lag_min": 11,
+   "reverse_peak_ratio": 1.23,
+   "n_a": 14779
+  },
+  {
+   "a": "York",
+   "b": "Telephone",
+   "same_line": false,
+   "peak_ratio": 2.33,
+   "peak_lag_min": 22,
+   "reverse_peak_ratio": 1.78,
+   "n_a": 1687
+  },
+  {
+   "a": "Telephone",
+   "b": "Market",
+   "same_line": false,
+   "peak_ratio": 2.05,
+   "peak_lag_min": 26,
+   "reverse_peak_ratio": 1.69,
+   "n_a": 2573
+  },
+  {
+   "a": "Lockwood",
+   "b": "Telephone",
+   "same_line": false,
+   "peak_ratio": 1.94,
+   "peak_lag_min": 18,
+   "reverse_peak_ratio": 1.86,
+   "n_a": 2607
+  },
+  {
+   "a": "York",
+   "b": "Leeland",
+   "same_line": false,
+   "peak_ratio": 1.78,
+   "peak_lag_min": 1,
+   "reverse_peak_ratio": 1.14,
+   "n_a": 9797
+  },
+  {
+   "a": "Lockwood",
+   "b": "Polk",
+   "same_line": false,
+   "peak_ratio": 1.75,
+   "peak_lag_min": 27,
+   "reverse_peak_ratio": 1.26,
+   "n_a": 10669
+  },
+  {
+   "a": "Hirsch",
+   "b": "Telephone",
+   "same_line": false,
+   "peak_ratio": 1.73,
+   "peak_lag_min": 23,
+   "reverse_peak_ratio": 1.64,
+   "n_a": 2316
+  },
+  {
+   "a": "Polk",
+   "b": "Market",
+   "same_line": false,
+   "peak_ratio": 1.5,
+   "peak_lag_min": 20,
+   "reverse_peak_ratio": 1.13,
+   "n_a": 18982
+  },
+  {
+   "a": "Lockwood",
+   "b": "Hirsch",
+   "same_line": false,
+   "peak_ratio": 1.44,
+   "peak_lag_min": 18,
+   "reverse_peak_ratio": 1.33,
+   "n_a": 7893
+  },
+  {
+   "a": "Hirsch",
+   "b": "York",
+   "same_line": false,
+   "peak_ratio": 1.41,
+   "peak_lag_min": 22,
+   "reverse_peak_ratio": 1.24,
+   "n_a": 7704
+  },
+  {
+   "a": "Telephone",
+   "b": "Leeland",
+   "same_line": false,
+   "peak_ratio": 1.4,
+   "peak_lag_min": 29,
+   "reverse_peak_ratio": 1.36,
+   "n_a": 6336
+  },
+  {
+   "a": "Telephone",
+   "b": "Commerce",
+   "same_line": false,
+   "peak_ratio": 1.35,
+   "peak_lag_min": 25,
+   "reverse_peak_ratio": 1.35,
+   "n_a": 7459
+  },
+  {
+   "a": "Lockwood",
+   "b": "Leeland",
+   "same_line": false,
+   "peak_ratio": 1.33,
+   "peak_lag_min": 16,
+   "reverse_peak_ratio": 1.19,
+   "n_a": 9578
+  },
+  {
+   "a": "Leeland",
+   "b": "Hirsch",
+   "same_line": false,
+   "peak_ratio": 1.32,
+   "peak_lag_min": 28,
+   "reverse_peak_ratio": 1.17,
+   "n_a": 7422
+  },
+  {
+   "a": "York",
+   "b": "Polk",
+   "same_line": false,
+   "peak_ratio": 1.31,
+   "peak_lag_min": 28,
+   "reverse_peak_ratio": 1.19,
+   "n_a": 11388
+  },
+  {
+   "a": "Commerce",
+   "b": "Hirsch",
+   "same_line": false,
+   "peak_ratio": 1.3,
+   "peak_lag_min": 25,
+   "reverse_peak_ratio": 1.18,
+   "n_a": 7989
+  },
+  {
+   "a": "Polk",
+   "b": "Hirsch",
+   "same_line": false,
+   "peak_ratio": 1.28,
+   "peak_lag_min": 21,
+   "reverse_peak_ratio": 1.23,
+   "n_a": 7934
+  },
+  {
+   "a": "Market",
+   "b": "York",
+   "same_line": false,
+   "peak_ratio": 1.25,
+   "peak_lag_min": 1,
+   "reverse_peak_ratio": 1.14,
+   "n_a": 19743
+  },
+  {
+   "a": "Commerce",
+   "b": "Polk",
+   "same_line": false,
+   "peak_ratio": 1.22,
+   "peak_lag_min": 15,
+   "reverse_peak_ratio": 1.12,
+   "n_a": 32554
+  },
+  {
+   "a": "Leeland",
+   "b": "Polk",
+   "same_line": false,
+   "peak_ratio": 1.2,
+   "peak_lag_min": 18,
+   "reverse_peak_ratio": 1.13,
+   "n_a": 26318
+  },
+  {
+   "a": "Leeland",
+   "b": "Market",
+   "same_line": false,
+   "peak_ratio": 1.17,
+   "peak_lag_min": 19,
+   "reverse_peak_ratio": 1.16,
+   "n_a": 16412
+  },
+  {
+   "a": "Market",
+   "b": "Commerce",
+   "same_line": false,
+   "peak_ratio": 1.16,
+   "peak_lag_min": 9,
+   "reverse_peak_ratio": 1.05,
+   "n_a": 20224
+  },
+  {
+   "a": "Lockwood",
+   "b": "Market",
+   "same_line": false,
+   "peak_ratio": 1.16,
+   "peak_lag_min": 10,
+   "reverse_peak_ratio": 1.15,
+   "n_a": 20016
+  }
+ ],
+ "blocked_min_per_day": {
+  "Market": 193.6,
+  "Hirsch": 206.9,
+  "Commerce": 223.0,
+  "York": 89.8,
+  "Lockwood": 106.8,
+  "Leeland": 208.7,
+  "Polk": 105.5,
+  "Telephone": 71.1
+ },
+ "duration": [
+  {
+   "s": "Market",
+   "raw_n": 24487,
+   "ep_n": 20259,
+   "raw_short_frac": 0.27,
+   "ep_short_frac": 0.179,
+   "ep_median": 6.5,
+   "ep_p90": 21.5,
+   "ep_p99": 108.4,
+   "ep_gt30_frac": 0.071
+  },
+  {
+   "s": "Hirsch",
+   "raw_n": 10643,
+   "ep_n": 7989,
+   "raw_short_frac": 0.264,
+   "ep_short_frac": 0.07,
+   "ep_median": 12.82,
+   "ep_p90": 71.2,
+   "ep_p99": 209.2,
+   "ep_gt30_frac": 0.258
+  },
+  {
+   "s": "Commerce",
+   "raw_n": 35603,
+   "ep_n": 34783,
+   "raw_short_frac": 0.02,
+   "ep_short_frac": 0.014,
+   "ep_median": 6.98,
+   "ep_p90": 14.9,
+   "ep_p99": 46.0,
+   "ep_gt30_frac": 0.025
+  },
+  {
+   "s": "York",
+   "raw_n": 18821,
+   "ep_n": 12455,
+   "raw_short_frac": 0.473,
+   "ep_short_frac": 0.197,
+   "ep_median": 6.53,
+   "ep_p90": 16.8,
+   "ep_p99": 81.3,
+   "ep_gt30_frac": 0.046
+  },
+  {
+   "s": "Lockwood",
+   "raw_n": 11535,
+   "ep_n": 11347,
+   "raw_short_frac": 0.051,
+   "ep_short_frac": 0.042,
+   "ep_median": 7.98,
+   "ep_p90": 21.4,
+   "ep_p99": 114.6,
+   "ep_gt30_frac": 0.073
+  },
+  {
+   "s": "Leeland",
+   "raw_n": 31776,
+   "ep_n": 26795,
+   "raw_short_frac": 0.205,
+   "ep_short_frac": 0.12,
+   "ep_median": 5.92,
+   "ep_p90": 13.8,
+   "ep_p99": 74.4,
+   "ep_gt30_frac": 0.043
+  },
+  {
+   "s": "Polk",
+   "raw_n": 16562,
+   "ep_n": 14780,
+   "raw_short_frac": 0.239,
+   "ep_short_frac": 0.153,
+   "ep_median": 4.4,
+   "ep_p90": 14.0,
+   "ep_p99": 112.4,
+   "ep_gt30_frac": 0.048
+  },
+  {
+   "s": "Telephone",
+   "raw_n": 2111,
+   "ep_n": 2023,
+   "raw_short_frac": 0.249,
+   "ep_short_frac": 0.234,
+   "ep_median": 3.72,
+   "ep_p90": 16.0,
+   "ep_p99": 72.0,
+   "ep_gt30_frac": 0.044
+  }
+ ],
+ "weekday_blocked_pct_peak_trough": {
+  "Market": [
+   17.8,
+   20,
+   9.2,
+   7
+  ],
+  "Hirsch": [
+   18.8,
+   4,
+   11.8,
+   18
+  ],
+  "Commerce": [
+   18.4,
+   10,
+   10.9,
+   22
+  ],
+  "York": [
+   8.5,
+   2,
+   3.3,
+   17
+  ],
+  "Lockwood": [
+   11.1,
+   2,
+   4.5,
+   17
+  ],
+  "Leeland": [
+   20.3,
+   12,
+   10.0,
+   3
+  ],
+  "Polk": [
+   12.2,
+   21,
+   2.9,
+   13
+  ],
+  "Telephone": [
+   7.5,
+   7,
+   3.2,
+   18
+  ]
+ },
+ "median_residual_by_elapsed": {
+  "elapsed": [
+   0,
+   2,
+   5,
+   10,
+   15,
+   20,
+   30,
+   45,
+   60,
+   90,
+   120
+  ],
+  "Market": [
+   6.5,
+   7.9,
+   7.5,
+   5.5,
+   6.5,
+   18.5,
+   25.6,
+   26.2,
+   28.0,
+   32.4,
+   32.1
+  ],
+  "Hirsch": [
+   11.0,
+   12.5,
+   11.6,
+   12.4,
+   23.3,
+   28.3,
+   29.4,
+   29.0,
+   31.3,
+   30.7,
+   52.2
+  ],
+  "Commerce": [
+   7.0,
+   5.2,
+   3.4,
+   3.4,
+   5.9,
+   8.8,
+   11.9,
+   15.1,
+   19.0,
+   30.9,
+   43.8
+  ],
+  "York": [
+   6.5,
+   6.2,
+   4.3,
+   4.4,
+   8.1,
+   14.8,
+   20.5,
+   25.7,
+   29.7,
+   39.3,
+   39.2
+  ],
+  "Lockwood": [
+   8.0,
+   6.4,
+   4.4,
+   4.8,
+   10.9,
+   18.9,
+   21.6,
+   27.5,
+   32.6,
+   42.2,
+   40.9
+  ],
+  "Leeland": [
+   5.9,
+   5.0,
+   3.0,
+   4.4,
+   15.2,
+   20.4,
+   22.1,
+   20.5,
+   21.9,
+   36.0,
+   39.3
+  ],
+  "Polk": [
+   4.4,
+   3.9,
+   3.4,
+   6.6,
+   16.8,
+   21.7,
+   27.3,
+   32.5,
+   41.8,
+   62.1,
+   64.0
+  ],
+  "Telephone": [
+   3.7,
+   4.3,
+   3.4,
+   8.6,
+   12.2,
+   14.1,
+   15.1,
+   16.7,
+   null,
+   null,
+   null
+  ]
+ },
+ "all8_observed_days": 166.8,
+ "concurrency_pct": {
+  "0": 45.08,
+  "1": 36.85,
+  "2": 14.27,
+  "3": 3.23,
+  "4": 0.5,
+  "5": 0.06
+ },
+ "coblock_lift": {
+  "Market": {
+   "Market": NaN,
+   "Hirsch": 1.05,
+   "Commerce": 0.96,
+   "York": 0.98,
+   "Lockwood": 0.95,
+   "Leeland": 1.01,
+   "Polk": 1.01,
+   "Telephone": 0.89
+  },
+  "Hirsch": {
+   "Market": 1.05,
+   "Hirsch": NaN,
+   "Commerce": 0.94,
+   "York": 0.96,
+   "Lockwood": 0.97,
+   "Leeland": 0.96,
+   "Polk": 1.24,
+   "Telephone": 1.08
+  },
+  "Commerce": {
+   "Market": 0.96,
+   "Hirsch": 0.94,
+   "Commerce": NaN,
+   "York": 2.14,
+   "Lockwood": 0.9,
+   "Leeland": 1.2,
+   "Polk": 0.98,
+   "Telephone": 1.01
+  },
+  "York": {
+   "Market": 0.98,
+   "Hirsch": 0.96,
+   "Commerce": 2.14,
+   "York": NaN,
+   "Lockwood": 5.69,
+   "Leeland": 0.91,
+   "Polk": 1.07,
+   "Telephone": 1.27
+  },
+  "Lockwood": {
+   "Market": 0.95,
+   "Hirsch": 0.97,
+   "Commerce": 0.9,
+   "York": 5.69,
+   "Lockwood": NaN,
+   "Leeland": 0.95,
+   "Polk": 1.02,
+   "Telephone": 0.94
+  },
+  "Leeland": {
+   "Market": 1.01,
+   "Hirsch": 0.96,
+   "Commerce": 1.2,
+   "York": 0.91,
+   "Lockwood": 0.95,
+   "Leeland": NaN,
+   "Polk": 1.02,
+   "Telephone": 1.06
+  },
+  "Polk": {
+   "Market": 1.01,
+   "Hirsch": 1.24,
+   "Commerce": 0.98,
+   "York": 1.07,
+   "Lockwood": 1.02,
+   "Leeland": 1.02,
+   "Polk": NaN,
+   "Telephone": 3.81
+  },
+  "Telephone": {
+   "Market": 0.89,
+   "Hirsch": 1.08,
+   "Commerce": 1.01,
+   "York": 1.27,
+   "Lockwood": 0.94,
+   "Leeland": 1.06,
+   "Polk": 3.81,
+   "Telephone": NaN
+  }
+ },
+ "predict": [
+  {
+   "h": 2,
+   "persistence": 0.6062038252630146,
+   "own": 0.6537616054654154,
+   "own_by_station": {
+    "Market": 0.676,
+    "Hirsch": 0.823,
+    "Commerce": 0.558,
+    "York": 0.684,
+    "Lockwood": 0.64,
+    "Leeland": 0.606,
+    "Polk": 0.592,
+    "Telephone": 0.655
+   },
+   "own+neighbours": 0.6685440512778777,
+   "own+neighbours_by_station": {
+    "Market": 0.676,
+    "Hirsch": 0.824,
+    "Commerce": 0.574,
+    "York": 0.692,
+    "Lockwood": 0.688,
+    "Leeland": 0.63,
+    "Polk": 0.578,
+    "Telephone": 0.701
+   },
+   "n_test": 927029,
+   "base_rate_test": 0.0932
+  },
+  {
+   "h": 5,
+   "persistence": 0.12592630768898327,
+   "own": 0.3576672731772408,
+   "own_by_station": {
+    "Market": 0.367,
+    "Hirsch": 0.625,
+    "Commerce": 0.176,
+    "York": 0.387,
+    "Lockwood": 0.292,
+    "Leeland": 0.303,
+    "Polk": 0.293,
+    "Telephone": 0.489
+   },
+   "own+neighbours": 0.4059895227620577,
+   "own+neighbours_by_station": {
+    "Market": 0.375,
+    "Hirsch": 0.628,
+    "Commerce": 0.233,
+    "York": 0.43,
+    "Lockwood": 0.459,
+    "Leeland": 0.385,
+    "Polk": 0.286,
+    "Telephone": 0.51
+   },
+   "n_test": 926980,
+   "base_rate_test": 0.0935
+  },
+  {
+   "h": 10,
+   "persistence": -0.33330522601829027,
+   "own": 0.17325517828408254,
+   "own_by_station": {
+    "Market": 0.128,
+    "Hirsch": 0.399,
+    "Commerce": 0.025,
+    "York": 0.174,
+    "Lockwood": 0.059,
+    "Leeland": 0.145,
+    "Polk": 0.16,
+    "Telephone": 0.368
+   },
+   "own+neighbours": 0.20990848652786243,
+   "own+neighbours_by_station": {
+    "Market": 0.161,
+    "Hirsch": 0.4,
+    "Commerce": 0.055,
+    "York": 0.206,
+    "Lockwood": 0.239,
+    "Leeland": 0.18,
+    "Polk": 0.154,
+    "Telephone": 0.388
+   },
+   "n_test": 926897,
+   "base_rate_test": 0.0934
+  },
+  {
+   "h": 15,
+   "persistence": -0.496616015785327,
+   "own": 0.11996875232844739,
+   "own_by_station": {
+    "Market": 0.052,
+    "Hirsch": 0.278,
+    "Commerce": 0.015,
+    "York": 0.113,
+    "Lockwood": 0.018,
+    "Leeland": 0.108,
+    "Polk": 0.12,
+    "Telephone": 0.335
+   },
+   "own+neighbours": 0.1264309959645129,
+   "own+neighbours_by_station": {
+    "Market": 0.076,
+    "Hirsch": 0.27,
+    "Commerce": 0.013,
+    "York": 0.125,
+    "Lockwood": 0.086,
+    "Leeland": 0.101,
+    "Polk": 0.112,
+    "Telephone": 0.34
+   },
+   "n_test": 926815,
+   "base_rate_test": 0.0934
+  },
+  {
+   "h": 30,
+   "persistence": -0.6619232091904748,
+   "own": 0.060434884121687626,
+   "own_by_station": {
+    "Market": 0.008,
+    "Hirsch": 0.113,
+    "Commerce": 0.007,
+    "York": 0.057,
+    "Lockwood": 0.005,
+    "Leeland": 0.054,
+    "Polk": 0.068,
+    "Telephone": 0.282
+   },
+   "own+neighbours": 0.04842196635902718,
+   "own+neighbours_by_station": {
+    "Market": 0.009,
+    "Hirsch": 0.098,
+    "Commerce": -0.001,
+    "York": 0.032,
+    "Lockwood": -0.002,
+    "Leeland": 0.021,
+    "Polk": 0.06,
+    "Telephone": 0.305
+   },
+   "n_test": 926579,
+   "base_rate_test": 0.0934
+  },
+  {
+   "h": 60,
+   "persistence": -0.8172877226729172,
+   "own": 0.025961749903908204,
+   "own_by_station": {
+    "Market": -0.002,
+    "Hirsch": 0.017,
+    "Commerce": 0.001,
+    "York": 0.019,
+    "Lockwood": 0.005,
+    "Leeland": 0.026,
+    "Polk": 0.037,
+    "Telephone": 0.217
+   },
+   "own+neighbours": -0.007115833174016206,
+   "own+neighbours_by_station": {
+    "Market": -0.008,
+    "Hirsch": -0.035,
+    "Commerce": -0.024,
+    "York": -0.031,
+    "Lockwood": -0.016,
+    "Leeland": -0.046,
+    "Polk": 0.035,
+    "Telephone": 0.247
+   },
+   "n_test": 926119,
+   "base_rate_test": 0.0934
+  },
+  {
+   "h": 120,
+   "persistence": -0.8981891556969408,
+   "own": 0.014764483202168055,
+   "own_by_station": {
+    "Market": -0.002,
+    "Hirsch": -0.004,
+    "Commerce": -0.0,
+    "York": 0.006,
+    "Lockwood": 0.006,
+    "Leeland": 0.015,
+    "Polk": 0.014,
+    "Telephone": 0.181
+   },
+   "own+neighbours": -0.017701073370899545,
+   "own+neighbours_by_station": {
+    "Market": -0.013,
+    "Hirsch": -0.069,
+    "Commerce": -0.015,
+    "York": -0.023,
+    "Lockwood": -0.025,
+    "Leeland": -0.049,
+    "Polk": 0.012,
+    "Telephone": 0.201
+   },
+   "n_test": 925207,
+   "base_rate_test": 0.0935
+  }
+ ]
+}
