@@ -1,0 +1,13 @@
+{
+  "description": "FRA IDs for the eight-street analysis subset.",
+  "fra_ids": [
+    "288129A",
+    "755640L",
+    "288224V",
+    "859523F",
+    "755709E",
+    "288039B",
+    "288051H",
+    "859517C"
+  ]
+}

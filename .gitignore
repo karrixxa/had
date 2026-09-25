@@ -1,0 +1,38 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+trainfo.env
+*.pem
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local raw downloads and generated datasets
+csv_downloads/
+raw_scrapes/
+data/raw/
+data/processed/
+visualizations/*.html
+visualizations/*.csv
+visualizations/*.md
+visualizations/*.geojson
+initial_report/*.csv
+initial_report/*.xlsx
+*.log
+com.charisxiong.trainfo-refresh.plist
+
+# Generated spreadsheet/report exports at the repository root
+trainfo_houston_*.csv
+trainfo_houston_*.xlsx
+trainfo_merged*.csv
+trainfo_merged*.xlsx
+
+# OS/editor files
+.DS_Store
+.vscode/settings.json
